@@ -1,0 +1,59 @@
+.section-sign
+    height: 100vh
+    width: 100vw
+    padding: 20px 0
+    background: $color-info
+
+    &__tabs
+        display: flex
+        justify-content: center
+        gap: 20px
+
+        &[role="tablist"]
+            border: none
+
+
+        a
+            &[role="tab"][aria-selected="true"], &[role="tab"]
+                border: none !important
+                border-radius: 10px
+                transition: all .3s ease
+
+            &[role="tab"]:hover:not([aria-selected="true"])
+                background: $color-hover
+
+            padding: 20px 30px
+            @include whatFont(20px, 120%, 700)
+            color: $color-white
+
+            &[role="tab"][aria-selected="true"]
+                background: $color-active
+                
+    &__box
+        margin-top: 30px
+
+.form-wrapper
+    width: 100%
+    form
+        display: flex
+        flex-direction: column
+        margin-inline: auto
+        max-width: 500px
+        width: 100%
+        gap: 15px
+
+        input
+            background-color: $color-white
+            border-radius: 10px
+            border: 1px solid $color-active
+            @include whatFont(20px, 120%, 700)
+            color: $color-black
+            padding: 20px 10px
+
+        button
+            background-color: $color-active
+            border-radius: 10px
+            border: 1px solid $color-active
+            @include whatFont(20px, 120%, 700)
+            color: $color-white
+            padding: 20px 10px
